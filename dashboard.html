@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/dashboard.css">
+</head>
+
+<body onload="mapData(0),createPage()">
+    <header>
+        <h1>HGP</h1>
+        <nav>
+            <ul id="nav">
+                <li id="close" class="nav-cm" onclick="menuClose()"><i class="fa fa-times"></i></li>
+                <li><a href="/"> Home</a></li>
+                <li><a href=""> About</a></li>
+                <li><a href=""> Dashboard</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+        <span id="menu" class="nav-cm" onclick="menuOpen()"><i class="fa fa-align-right"></i></span>
+    </header>
+
+    <!-- container 1 -->
+    <div class="main-container">
+        <!-- container child1  -->
+        <div class="container-child1">
+            <ul>
+                <li class="child1-li"><span>
+                        <ion-icon name="grid"></ion-icon>
+                    </span> <a href="#">Dahsboard</a> </li>
+                <li class="child1-li"><span>
+                        <ion-icon name="color-palette"></ion-icon>
+                    </span> <a href="#">Layout</a></li>
+                <li class="child1-li"><span>
+                        <ion-icon name="document-text"></ion-icon>
+                    </span> <a href="#">Content</a></li>
+                <li class="child1-li"><span>
+                        <ion-icon name="copy"></ion-icon>
+                    </span> <a href="#">Page</a></li>
+            </ul>
+            <div class="arrow-symbol" onclick="megaMenu()">
+                <div>
+                    <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- contaienr Child2  -->
+        <div class="container-child2">
+            <div class="main-header">
+                <h1>Dashboard Section here</h1>
+                <div class="header-btn">
+                    <button>Delete All</button>
+                    <button onclick="addEmploy(0)">Add Employ</button>
+
+                </div>
+            </div>
+            <div class="table-div">
+                <table>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <!-- <tr>
+                        <td>text</td>
+                        <td>12457</td>
+                        <td>text1@gmail.com</td>
+                        <td>Lucknow</td>
+                        <td>
+                            <ion-icon name="pencil" onclick="addEmploy(1)"></ion-icon>
+                            <ion-icon name="trash"></ion-icon>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>text2</td>
+                        <td>124572</td>
+                        <td>text2@gmail.com</td>
+                        <td>Lucknow</td>
+                        <td>
+                            <ion-icon name="pencil" onclick="addEmploy(1)"></ion-icon>
+                            <ion-icon name="trash"></ion-icon>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>text3</td>
+                        <td>12457</td>
+                        <td>text3@gmail.com</td>
+                        <td>Lucknow</td>
+                        <td>
+                            <ion-icon name="pencil" onclick="addEmploy(1)"></ion-icon>
+                            <ion-icon name="trash"></ion-icon>
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
+            <!--================================== 
+                Pagination 
+            ======================================================== -->
+            <div class="pagination">
+                <div>
+                    <input type="number"  id="input" onchange="createPage()" value ="5">;
+                    <p><em>Employs Number on the page</em></p>
+                </div>
+                <div id="pageNum" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contaienr 2nd   -->
+    <div class="form-div">
+        <div class="form1_div form-common" >
+            <form action = "#">
+                <h3>Fill User Details</h3>
+                <input type="text" id = "name" placeholder="Name" >
+                <input type="number" id = "phone" placeholder="Phone Number">
+                <input type="email" id = "email" placeholder="Email">
+                <input type="text" id = "city" placeholder="City">
+                <div class="form-btn">
+                    <button onclick="closeForm(0)">Cancel</button>
+                    <button type="submit" onclick="saveData()" >Add</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form2_div form-common">
+            <form action ="#">
+                <h3>Update User Details</h3>
+                <input type="text" id = "updateName" placeholder="Name">
+                <input type="number" id = "updatePhone" placeholder="Phone Number">
+                <input type="email" id = "updateEmail" placeholder="Email">
+                <input type="text" id = "updateCity" placeholder="City">
+                <div class="form-btn">
+                    <button  onclick="closeForm(1)">Cancel</button>
+                    <button type="submit" onclick = "saveData()">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- script Link  -->
+    <script src="./script/dashboard.js"></script>
+    <!-- script icon  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

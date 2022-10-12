@@ -1,0 +1,17 @@
+// Coder cmw13:58
+// Your Tasks:
+// ****
+// A) Create simple Admin Panel pages for CRUD operation pages with responsiveness.
+//     1) Dashboard / Sidebar
+//     2) Create page it will have from 
+//     3) Read page  and list page 
+//     4) Update page 
+// B)  Create simple frontend template with  responsiveness 
+//     1) Header
+//     2) Mega menu
+//     3) Any content section 
+//     4) Footer
+// Coder cmw14:00
+// Upload your tasks in git hub and share link with us.
+// in hrbp@compendiousmedworks.com
+// codercmw@gmail.com
